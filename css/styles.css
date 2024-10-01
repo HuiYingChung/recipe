@@ -83,6 +83,7 @@ h1, h2, h3 {
 }
 
 h1 {
+   
     font-size: 40px;
     text-align: center; 
     padding-bottom: 20px;
@@ -105,6 +106,7 @@ p{
 
 a {
     text-decoration: none;
+    color: var(--orange);
 }
 
 nav {
@@ -228,6 +230,7 @@ article{
     line-height: 1.5;
 }
 
+
 article section {
     padding: 20px;
 }
@@ -290,7 +293,7 @@ figure {
 }
 
 figure img {
-    max-width: 25vw;   
+    max-block-size: 25vw;   
 }
 
 figcaption {
@@ -359,21 +362,29 @@ footer p{
 
 /* -------------------- MEDIA QUERY (medium) --------------- */
 @media screen and (min-width: 768px) {
+    
+    h1{
+        position: relative;
+        top: 85px;
+        padding: 20px;
+        text-align: left;
+    }
+    
     #hamburger {
         display: none;
     }
 
     nav {
         display: grid;
-        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     }
 
     nav menu {
         font-family: "Bebas Neue", "Impact";
         grid-template-columns: 1fr repeat(7,1fr) 2fr;
         grid-template-rows: 1fr 1fr;
-        box-shadow: none;
+        column-gap: 20px;
         text-align: center;
+        padding-bottom: 100px;
     }
 
     menu li:not(:nth-child(2)):not(:last-child):not(:first-child) {
@@ -400,9 +411,9 @@ footer p{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        grid-row: 2/3;
-        grid-column: 1 / span 9;
-        
+        /* grid-row: 2/3; */
+        position: relative;
+        top: 100px;       
     }
 
     menu img {
@@ -414,7 +425,67 @@ footer p{
         top: 20px;
         left: 45%;
     }
+
+    article {
+        position: relative;
+        top: -80px;
+    }
+    
+   
+    .article-buttons {
+        max-width: 1026px;
+        margin: 0 auto;
+        position: relative;
+        top: 86px;
+        background-color: rgba(255, 255, 255, 0.8);
+    }
+    button {
+        background-color: transparent;
+    }
+
+    dl {
+        width: 50%;
+        margin: 0 auto;
+    }
+
+    .ingredients {
+        float: left;
+    }
+
+    .directions {
+        padding-left: 250px;
+        padding-bottom: 0;
+    }
+
+    aside {
+        clear: both;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    figure{
+        display: flex;
+    }
+
+    figure img {
+        max-block-size: 15vw;   
+    }
+
+    footer {
+        display:grid;
+        grid-template-columns: 1fr 1fr;
+    }
+
+    #social {
+        grid-column: 2/3;
+    }
+
+    footer div {
+        grid-row: 1/2;
+    }
+
 }
+
 
 
 
@@ -422,3 +493,4 @@ footer p{
 @media screen and (min-width: 1025px) {
 
 }
+
