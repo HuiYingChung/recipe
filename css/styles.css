@@ -1,6 +1,6 @@
 /* ---------------------IMPORTED FONTS--------------------- */
 
-@import url('https://fonts.googleapis.com/css2?family=Cardo:ital,wght@0,400;0,700;1,400&family=Josefin+Sans:ital,wght@0,100..700;1,100..700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Montserrat:ital,wght@0,400;0,700;1,400&display=swap');
 
 /* -----------------------CSS RESET------------------------ */
 
@@ -65,6 +65,360 @@ table {
 
 /* ---------GLOBAL STYLES (mobile first/small) ------------- */
 
+html {
+    background-color: var(--lt-green);
+}
+
+body {
+    font-family: "Montserrat", "Helvetica", sans-serif;
+    max-width: 1440px;
+    min-width: 320px;
+    background-color: var(--white);
+    margin: 0 auto;
+}
+
+
+h1, h2, h3 {
+    font-family: "Bebas Neue", "Impact", sans-serif;
+}
+
+h1 {
+    font-size: 40px;
+    text-align: center; 
+    padding-bottom: 20px;
+}
+
+h2 {
+    font-size: 30px;
+    text-align: center;
+    padding-bottom: 15px;
+}
+
+h3{
+    font-size: 25px;
+}
+
+p{
+    font-size: 16px;
+    padding: 10px 20px 0 20px;
+}
+
+a {
+    text-decoration: none;
+}
+
+nav {
+    max-width: 1440px;
+    position: absolute;
+    top: 0;
+    display: grid;
+    grid-template-columns: 1fr;
+    row-gap: 20px;
+    align-items: center;
+    justify-items: center;
+    background-color: var(--white);
+}
+
+nav h2 {
+    display: none;
+}
+
+
+nav span {
+    display: block;
+    font-family: "Bebas Neue", "Impact", sans-serif;
+    font-size: 20px;
+}
+
+nav a {
+    font-size: 20px;
+}
+
+nav menu {
+    list-style: none; 
+    display: grid; 
+    grid-template-columns: 1fr 1fr 1fr;
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    height: 80px;
+}
+
+nav button {
+    background-color: var(--orange);
+}
+
+menu img {
+    max-width: 50px;
+}
+
+menu li:not(:nth-child(2)):not(:last-child):not(:first-child) {
+    display: none; 
+}
+
+
+#hamburger {
+    display: flex;
+    flex-direction: column;
+}
+
+#hamburger svg {
+    align-self: center;
+}
+
+menu li:nth-child(2) {
+    text-align: center;
+    align-content: center;
+    width: 55vw;
+    background-color: var(--orange);  
+    
+}
+
+menu li:last-child {
+    display: flex;
+    flex-direction: column;   
+}
+
+menu li:first-child, menu li:last-child {
+    text-align: center;
+    align-self: center;
+}
+
+
+form {
+    display: flex;
+    align-items: center;
+    grid-column: 1/4;
+    padding-bottom: 30px;
+}
+
+input[type="search"] {
+    padding: 10px;
+    font-size: 16px;
+    border: 2px solid var(--orange);
+    width: 25ch;
+    max-width: 100%;
+}
+
+main {
+    padding-top: 180px;
+}
+
+button {
+    display: flex;
+    flex-direction: column;
+    background-color: var(--white);
+    border: none;
+    padding: 10px;
+    cursor: pointer;
+    color: var(--orange);
+    justify-self: center;
+}
+
+.article-buttons {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    font-size: 20px;
+}
+
+button > span {
+    font-family: "Bebas Neue", "Impact", sans-serif;
+    font-size: 20px;
+}
+
+article{
+    line-height: 1.5;
+}
+
+article section {
+    padding: 20px;
+}
+
+article img {
+    display: block;
+    max-width: 100%;
+    margin: 0 auto;    
+}
+
+dl {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+}
+
+dl dt {
+    font-weight: bold;
+    grid-column: 1/2;
+}
+
+dl dd {
+    grid-column: 2/3;
+   
+}
+
+.ingredients ul {
+    padding-left: 20px;
+}
+
+.ingredients ul li {
+    list-style: disc;
+    padding-left: 10px;
+}
+
+.directions ol {
+    padding-left: 20px;
+}
+
+.directions ol li {
+    list-style: decimal;
+    padding-left: 10px;
+    padding-bottom: 15px;
+}
+
+aside {
+    background-color: var(--green);
+    padding: 10px;
+}
+
+aside h2 {
+    padding-top: 20px;
+    grid-column: 1/-1;
+}
+
+figure {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    padding: 10px;
+    gap: 15px;  
+}
+
+figure img {
+    max-width: 25vw;   
+}
+
+figcaption {
+    display: flex;
+    flex-direction: column;
+    line-height: 1.5;   
+}
+
+figcaption strong{
+    font-family: "Bebas Neue", "Impact", sans-serif;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 1;
+}
+
+figcaption span {
+    font-weight: bold;
+}
+
+footer {
+    font-size: 20px;
+}
+
+footer h2, footer h3, footer span {
+    visibility: hidden;
+    font-size: small;
+    line-height: 0.5;
+}
+
+#social {
+    padding: 15px;
+}
+
+#social ul {
+    font-size: 20px;
+    display: grid;
+    text-align: center;
+    grid-template-columns: repeat(4, 1fr);
+}
+
+#social a {
+    font-family: "Bebas Neue", "Impact", sans-serif;
+    color: var(--orange);
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+}
+
+#social svg {
+    margin: 0 auto;
+}
+
+footer div{
+    text-align: center;
+    padding: 20px;
+}
+
+footer img{
+    max-width: 50%;
+}
+
+footer p{
+    font-family: "Bebas Neue", "Impact", sans-serif;
+}
+
+
 /* -------------------- MEDIA QUERY (medium) --------------- */
+@media screen and (min-width: 768px) {
+    #hamburger {
+        display: none;
+    }
+
+    nav {
+        display: grid;
+        box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+    }
+
+    nav menu {
+        font-family: "Bebas Neue", "Impact";
+        grid-template-columns: 1fr repeat(7,1fr) 2fr;
+        grid-template-rows: 1fr 1fr;
+        box-shadow: none;
+        text-align: center;
+    }
+
+    menu li:not(:nth-child(2)):not(:last-child):not(:first-child) {
+        display: contents;
+    }
+
+    menu li:nth-child(2) {
+        width: 10vw;  
+    }
+
+    menu li:last-child{
+        grid-column: 9/11;
+        grid-row: 1/2;
+        padding-top: 10px;
+    }
+
+    menu li:nth-child(3) a,
+    menu li:nth-child(4) a,
+    menu li:nth-child(5) a,
+    menu li:nth-child(6) a, 
+    menu li:nth-child(7) a,
+    menu li:nth-child(8) a,
+    menu li:nth-child(9) a {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        grid-row: 2/3;
+        grid-column: 1 / span 9;
+        
+    }
+
+    menu img {
+        align-self: center;
+    }
+
+    form{
+        position: absolute;
+        top: 20px;
+        left: 45%;
+    }
+}
+
+
 
 /* -------------------- MEDIA QUERY (large) ---------------- */
+@media screen and (min-width: 1025px) {
+
+}
