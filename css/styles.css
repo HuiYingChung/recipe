@@ -108,7 +108,7 @@ a {
     color: var(--orange);
 }
 
-a:hover, button:hover {
+a:hover, button:hover, figure a:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
@@ -287,6 +287,10 @@ aside h2 {
     grid-column: 1/-1;
 }
 
+aside a {
+    color: var(--black)
+}
+
 figure {
     display: grid;
     grid-template-columns: 1fr 2fr;
@@ -294,7 +298,9 @@ figure {
     gap: 15px;  
 }
 
+
 figure:hover {
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     background-color: var(--orange);
 }
 
@@ -479,6 +485,7 @@ footer p{
 
     figure{
         display: flex;
+        padding: 10px;
     }
 
    
@@ -613,6 +620,7 @@ footer p{
 
     figure {
         flex-direction: column;
+        padding-bottom: 0;
     }
 
     figure img {
@@ -704,13 +712,11 @@ footer p{
         line-height: 1;
     }
     #social, footer {
-        padding: 0;
-        
+        padding: 0;    
     }
 
     #social a {
-        color:#000;
-        
+        color:#000;    
     }
 
     #social a[aria-label="Facebook"]::after{
@@ -738,8 +744,7 @@ footer p{
     }
 
     figcaption svg {
-        width: 10px;
-        
+        width: 10px;    
     }
 
     footer div {
@@ -748,8 +753,7 @@ footer p{
         display: flex;
         gap: 20px;
         flex-direction: row-reverse;
-        padding-top: 20px;
-        
+        padding-top: 20px;    
     }
 
 }
