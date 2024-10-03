@@ -646,7 +646,8 @@ footer p{
         height: auto;    
     }
     #social a {
-        color:#000;    
+        color:#000;
+        page-break-after: avoid;    
     }
     #social a[aria-label="Facebook"]::after{
         content: "\A facebook.com";
@@ -684,9 +685,9 @@ footer p{
         content: " (" attr(href) ")";
         font-size: 10px;
     }
-    #social a[href] {
+    /* #social a[href] {
         display:block;
-    }
+    } */
     /* #social a[href]::after {
         content: " " attr(href);
     } */
