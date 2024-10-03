@@ -600,6 +600,7 @@ footer p{
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         padding: 0;
+        background-color: #fff;
     }
     body {
         font-family: Georgia, 'Times New Roman', Times, serif;
