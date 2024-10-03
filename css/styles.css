@@ -294,6 +294,10 @@ figure {
     gap: 15px;  
 }
 
+figure:hover {
+    background-color: var(--orange);
+}
+
 figure img {
     max-block-size: 25vw;   
 }
@@ -477,6 +481,8 @@ footer p{
         display: flex;
     }
 
+   
+
     figure img {
         max-block-size: 15vw;   
     }
@@ -621,3 +627,129 @@ footer p{
 
 }
 
+/* --------------------MEDIA QUERY (print)--------------------- */
+
+@media print{
+
+    @page {
+        margin: 0.5in;
+    }
+
+   
+    nav, article img, .article-buttons, #social svg{
+        display: none;
+    }
+
+    .details, .directions, .ingredients {
+        float: left;
+        font-size: 11px;
+        line-height: 1.5;
+    }
+
+    .details, .ingredient {
+        max-width: 15%;
+    }
+
+    .directions {
+        max-width: 45%;
+        padding-bottom: 0;
+    }
+
+    aside {
+        clear: both;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+        padding: 0;
+    }
+    
+    body {
+        
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        background-color: #fff;
+        position: relative;
+        top:-80px;
+    }
+
+    main {
+        padding-bottom: 0;
+    }
+
+    h1, h2, h3, figcaption strong, #social a, footer p {
+        font-family: Georgia, 'Times New Roman', Times, serif;
+        line-height: 1;
+    }
+
+    h1 {
+       font-size: 24px;
+    }
+
+    h2 {
+        font-size: 20px;
+        padding-top: 0;
+    }
+
+    p, figcaption {
+        font-size: 11px;
+        line-height: 1.5;
+        padding: 0;
+    }
+
+    img, aside img, svg{
+        max-height: 0.5in;
+        filter: grayscale(100%);
+    }
+
+    figcaption strong, #social a {
+        font-size: 14px;
+        line-height: 1;
+    }
+    #social, footer {
+        padding: 0;
+        
+    }
+
+    #social a {
+        color:#000;
+        
+    }
+
+    #social a[aria-label="Facebook"]::after{
+        content: "\A facebook.com";
+        white-space: pre-wrap;
+        text-decoration: underline; 
+    }
+
+    #social a[aria-label="Instagram"]::after{
+        content: "\A instagram.com";
+        white-space: pre-wrap;
+        text-decoration: underline; 
+    }
+
+    #social a[aria-label="YouTube"]::after{
+        content: "\A youtube.com";
+        white-space: pre-wrap;
+        text-decoration: underline; 
+    }
+
+    #social a[aria-label="TikTok"]::after{
+        content: "\A tiktok.com";
+        white-space: pre-wrap;
+        text-decoration: underline; 
+    }
+
+    figcaption svg {
+        width: 10px;
+        
+    }
+
+    footer div {
+        position: relative;
+        bottom: -50px;
+        display: flex;
+        gap: 20px;
+        flex-direction: row-reverse;
+        padding-top: 20px;
+        
+    }
+
+}
