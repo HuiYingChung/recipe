@@ -640,7 +640,9 @@ footer p{
         line-height: 1;
     }
     #social, footer {
-        padding: 0;    
+        padding: 0;
+        page-break-inside: avoid;
+        height: auto;    
     }
     #social a {
         color:#000;    
