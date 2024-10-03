@@ -68,7 +68,6 @@ table {
 html {
     background-color: var(--lt-green);
 }
-
 body {
     font-family: "Montserrat", "Helvetica", sans-serif;
     max-width: 700px;
@@ -77,41 +76,35 @@ body {
     margin: 0 auto;
 }
 
-
 h1, h2, h3 {
     font-family: "Bebas Neue", "Impact", sans-serif;
 }
-
 h1 { 
     font-size: 40px;
     text-align: center; 
     padding-bottom: 20px;
 }
-
 h2 {
     font-size: 30px;
     text-align: center;
     padding-bottom: 15px;
 }
-
 h3{
     font-size: 25px;
 }
-
 p{
     font-size: 16px;
     padding: 10px 20px 0 20px;
 }
-
 a {
     text-decoration: none;
     color: var(--orange);
 }
-
 a:hover, button:hover, figure a:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
 }
 
+/* -------NAV styles------- */
 nav {
     max-width: 700px;
     position: absolute;
@@ -119,23 +112,23 @@ nav {
     align-items: center;
     justify-items: center;
     background-color: var(--white);
+    z-index:5;
 }
-
 nav h2 {
-    display: none;
+    visibility: hidden;
+    height: 1px;
+    width: 1px;
+    padding: 0;
+    margin: 0;
 }
-
-
 nav span {
     font-family: "Bebas Neue", "Impact", sans-serif;
     font-size: 20px;
-
 }
-
 nav a {
     font-size: 20px;
 }
-
+/* -------MENU styles-------- */
 nav menu {
     list-style: none; 
     display: grid; 
@@ -143,60 +136,49 @@ nav menu {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
     height: 80px;
 }
-nav button {
-    background-color: var(--orange);
-}
-
 menu img {
     max-width: 50px;
     padding-top: 5px;;
 }
-
-
 menu li:not(:nth-child(2)):not(:last-child):not(:first-child) {
     display: none; 
 }
-
-
 #hamburger {
     display: flex;
     flex-direction: column;
 }
-
 #hamburger svg {
     align-self: center;
 }
-
+menu li:nth-child(2) {
+    text-align: center;
+    align-content: center;
+    width: 55vw;
+    background-color: var(--orange);      
+}
+menu li:last-child {
+    display: flex;
+    flex-direction: column;   
+}
+menu li:first-child, menu li:last-child {
+    text-align: center;
+    align-self: center;
+}
+/* ---------hamburger menu not work Q_Q----------- */
 menu label {
     cursor: pointer;
     display: inline-block;
     user-select: none;
 }
-
 menu input {
     display: none;
 }
-
-
-menu li:nth-child(2) {
-    text-align: center;
-    align-content: center;
-    width: 55vw;
-    background-color: var(--orange);  
-    
+menu input:checked ~ menu li:not(:nth-child(2)):not(:last-child):not(:first-child) {
+    display: contents; 
 }
+/* -----------hamburger menu not work Q_Q----------- */
 
-menu li:last-child {
-    display: flex;
-    flex-direction: column;   
-}
-
-menu li:first-child, menu li:last-child {
-    text-align: center;
-    align-self: center;
-}
-
-
+/*--------FORM styles--------  */
 form {
     display: flex;
     align-items: center;
@@ -204,7 +186,6 @@ form {
     grid-column: 1/4;
     padding: 30px;
 }
-
 input[type="search"] {
     padding: 10px;
     font-size: 16px;
@@ -212,11 +193,13 @@ input[type="search"] {
     width: 25ch;
     max-width: 100%;
 }
-
+nav button {
+    background-color: var(--orange);
+}
+/* ----------MAIN styles---------- */
 main {
     padding-top: 180px;
 }
-
 button {
     display: flex;
     flex-direction: column;
@@ -227,136 +210,111 @@ button {
     color: var(--orange);
     justify-self: center;
 }
-
 .article-buttons {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
     font-size: 20px;
 }
-
 button > span {
     font-family: "Bebas Neue", "Impact", sans-serif;
     font-size: 20px;
 }
-
 article{
     line-height: 1.5;
 }
-
-
 article section {
     padding: 20px;
 }
-
 article img {
     display: block;
     max-width: 100%;
     margin: 0 auto;    
 }
-
 dl {
     display: grid;
     grid-template-columns: 1fr 2fr;
 }
-
 dl dt {
     font-weight: bold;
     grid-column: 1/2;
 }
-
 dl dd {
     grid-column: 2/3;
-   
 }
-
 .ingredients ul {
     padding-left: 20px;
 }
-
 .ingredients ul li {
     list-style: disc;
     padding-left: 10px;
 }
-
 .directions ol {
     padding-left: 20px;
 }
-
 .directions ol li {
     list-style: decimal;
     padding-left: 10px;
     padding-bottom: 15px;
 }
-
+/* ---------ASIDE styles--------- */
 aside {
     background-color: var(--green);
     padding: 10px;
 }
-
 aside h2 {
     padding-top: 20px;
     grid-column: 1/-1;
 }
-
 aside a {
     color: var(--black)
 }
-
 figure {
     display: grid;
     grid-template-columns: 1fr 2fr;
     padding: 10px;
     gap: 15px;  
 }
-
-
 figure:hover {
     box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.5);
     background-color: var(--orange);
+    transition-duration: 0.5s;
 }
-
 figure img {
     max-block-size: 25vw;   
 }
-
 figcaption {
     display: flex;
     flex-direction: column;
     line-height: 1.5;   
 }
-
 figcaption strong{
     font-family: "Bebas Neue", "Impact", sans-serif;
     font-weight: bold;
     font-size: 20px;
     line-height: 1;
 }
-
 figcaption span {
     font-weight: bold;
 }
 
+/* -----------FOOTER styles------------ */
 footer {
     font-size: 20px;
 }
-
 footer h2, footer h3, footer span {
     visibility: hidden;
     font-size: small;
     line-height: 0.5;
 }
-
 #social {
     padding: 15px;
 }
-
 #social ul {
     font-size: 20px;
     display: grid;
     text-align: center;
     grid-template-columns: repeat(4, 1fr);
 }
-
 #social a {
     font-family: "Bebas Neue", "Impact", sans-serif;
     color: var(--orange);
@@ -364,24 +322,19 @@ footer h2, footer h3, footer span {
     flex-direction: column;
     flex-wrap: wrap;
 }
-
 #social svg {
     margin: 0 auto;
 }
-
 footer div{
     text-align: center;
     padding: 20px;
 }
-
 footer img{
     max-width: 50%;
 }
-
 footer p{
     font-family: "Bebas Neue", "Impact", sans-serif;
 }
-
 
 /* -------------------- MEDIA QUERY (medium) --------------- */
 @media screen and (min-width: 768px) {
@@ -389,23 +342,19 @@ footer p{
     body {
         max-width: 940px ;
     }
-    
     h1{
         position: relative;
         top: 100px;
         padding: 20px;
         text-align: left;
     }
-    
     #hamburger {
         display: none;
     }
-
     nav {
         display: grid;
         max-width: 940px;
     }
-
     nav menu {
         font-family: "Bebas Neue", "Impact";
         grid-template-columns: 1fr repeat(7,1fr) 2fr;
@@ -415,22 +364,18 @@ footer p{
         padding-bottom: 100px;
         height: 100px;
     }
-
     menu li:not(:nth-child(2)):not(:last-child):not(:first-child) {
         display: contents;
     }
-
     menu li:nth-child(2) {
         width: 10vw; 
         height: 100px; 
     }
-
     menu li:last-child{
         grid-column: 9/11;
         grid-row: 1/2;
         padding-top: 10px;
     }
-
     menu li:nth-child(3) a,
     menu li:nth-child(4) a,
     menu li:nth-child(5) a,
@@ -441,28 +386,22 @@ footer p{
         display: flex;
         flex-direction: column;
         flex-wrap: wrap;
-        /* grid-row: 2/3; */
         position: relative;
         top: 100px;       
     }
-
     menu img {
         align-self: center;
     }
-
     form{
         position: absolute;
         top: 20px;
         left: 45%;
         padding-top: 10px;
     }
-
     article, aside, footer {
         position: relative;
         top: -80px;
     }
-    
-   
     .article-buttons {
         max-width: 1026px;
         margin: 0 auto;
@@ -473,48 +412,37 @@ footer p{
     button {
         background-color: transparent;
     }
-
     dl {
         width: 50%;
         margin: 0 auto;
     }
-
     .ingredients {
         float: left;
     }
-
     .directions {
         padding-left: 250px;
         padding-bottom: 0;
     }
-
     aside {
         clear: both;
         display: grid;
         grid-template-columns: 1fr 1fr;
     }
-
     figure{
         display: flex;
         padding: 10px;
     }
-
-   
-
     figure img {
         max-block-size: 15vw;   
     }
-
     footer {
         display: grid;
         grid-template-columns: 1fr 1fr;
         padding-bottom: 0;
     }
-
     #social {
         grid-column: 2/3;
     }
-
     footer div {
         grid-row: 1/2;
     }
@@ -526,21 +454,17 @@ footer p{
     body{
         max-width: 1200px;
     }
-
     h1 {
         position: static;
         text-align: center;
     }
-
     nav {
         max-width: 1200px;;
     }
-
     nav menu {
         padding-bottom: 20px;
         height: 80px;
     }
-
     menu li:nth-child(3) a,
     menu li:nth-child(4) a,
     menu li:nth-child(5) a,
@@ -551,7 +475,7 @@ footer p{
         position: static;
         padding-top: 20px;
     }
-    
+   
     form{
         position: static;
         padding-top:30px;
@@ -559,7 +483,6 @@ footer p{
     article, aside, footer {
         position: static;
     }
-
     .article-buttons {
         position: static;
         background-color: var(--white);
@@ -569,81 +492,60 @@ footer p{
         margin: 0;
         align-items: center; 
     }
-
-    article section {
-        padding-bottom: 0;
-    }
-
     .mainArticle {
         display: grid;
         grid-template-columns: 1fr 4fr 5fr;
         padding-left: 0;
     }
-
     .details {
         background-color: var(--black);
         color: var(--green);
-        margin-top: 0;
         padding: 5px 0 10px 0;
     }
-
     dl {
         grid-template-columns: repeat(5, 1fr);
         width: 100%;
         text-align: center;
     }
-
     dt {
         grid-row: 1/2;
     }
-
     dd {
         grid-row: 2/3;
     }
-
     dl dt:first-of-type, dl dd:first-of-type {
         grid-column: 1/2;
     }
-
     dl dt:nth-of-type(2), dl dd:nth-of-type(2) {
         grid-column: 2/3;
     }
-
     dl dt:nth-of-type(3), dl dd:nth-of-type(3) {
         grid-column: 3/4;
     }
-
     dl dt:nth-of-type(4), dl dd:nth-of-type(4) {
         grid-column: 4/5;
     }
-
     dl dt:nth-of-type(5), dl dd:nth-of-type(5) {
         grid-column: 5/6;
     }
-    
     .ingredients {
         padding-bottom: 20px;
     }
-
     aside {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
-
     figure {
         flex-direction: column;
         padding-bottom: 0;
     }
-
     figure img {
         max-width: 85%;
         max-height: 85%;
         margin: 0 auto;
     }
-
     figcaption {
         padding: 10px 20px 0 20px;
     }
-
 }
 
 /* --------------------MEDIA QUERY (print)--------------------- */
@@ -652,35 +554,28 @@ footer p{
 
     @page {
         margin: 0.5in;
-    }
-
-   
+    }  
     nav, article img, .article-buttons, #social svg{
         display: none;
     }
-
     .details, .directions, .ingredients {
         float: left;
         font-size: 11px;
         line-height: 1.5;
     }
-
     .details, .ingredient {
         max-width: 15%;
     }
-
     .directions {
         max-width: 45%;
         padding-bottom: 0;
     }
-
     aside {
         clear: both;
         display: grid;
         grid-template-columns: 1fr 1fr 1fr 1fr;
         padding: 0;
     }
-    
     body {
         
         font-family: Georgia, 'Times New Roman', Times, serif;
@@ -688,7 +583,6 @@ footer p{
         position: relative;
         top:-80px;
     }
-
     main {
         padding-bottom: 0;
     }
@@ -697,27 +591,22 @@ footer p{
         font-family: Georgia, 'Times New Roman', Times, serif;
         line-height: 1;
     }
-
     h1 {
        font-size: 24px;
     }
-
     h2 {
         font-size: 20px;
         padding-top: 0;
     }
-
     p, figcaption {
         font-size: 11px;
         line-height: 1.5;
         padding: 0;
     }
-
     img, aside img, svg{
         max-height: 0.5in;
         filter: grayscale(100%);
     }
-
     figcaption strong, #social a {
         font-size: 14px;
         line-height: 1;
@@ -725,39 +614,32 @@ footer p{
     #social, footer {
         padding: 0;    
     }
-
     #social a {
         color:#000;    
     }
-
     #social a[aria-label="Facebook"]::after{
         content: "\A facebook.com";
         white-space: pre-wrap;
         text-decoration: underline; 
     }
-
     #social a[aria-label="Instagram"]::after{
         content: "\A instagram.com";
         white-space: pre-wrap;
         text-decoration: underline; 
     }
-
     #social a[aria-label="YouTube"]::after{
         content: "\A youtube.com";
         white-space: pre-wrap;
         text-decoration: underline; 
     }
-
     #social a[aria-label="TikTok"]::after{
         content: "\A tiktok.com";
         white-space: pre-wrap;
         text-decoration: underline; 
     }
-
     figcaption svg {
         width: 10px;    
     }
-
     footer div {
         position: relative;
         bottom: -50px;
@@ -766,5 +648,4 @@ footer p{
         flex-direction: row-reverse;
         padding-top: 20px;    
     }
-
 }
