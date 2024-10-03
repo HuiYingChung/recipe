@@ -167,6 +167,17 @@ menu li:not(:nth-child(2)):not(:last-child):not(:first-child) {
     align-self: center;
 }
 
+menu label {
+    cursor: pointer;
+    display: inline-block;
+    user-select: none;
+}
+
+menu input {
+    display: none;
+}
+
+
 menu li:nth-child(2) {
     text-align: center;
     align-content: center;
