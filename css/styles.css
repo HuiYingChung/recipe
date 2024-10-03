@@ -579,6 +579,7 @@ footer p{
 
     @page {
         margin: 0.5in;
+        size: letter portrait;
     }  
     nav, article img, .article-buttons, #social svg{
         display: none;
@@ -607,6 +608,9 @@ footer p{
         background-color: #fff;
         position: relative;
         top:-80px;
+        max-height: 11in;
+        overflow: hidden;
+        page-break-inside: avoid;
     }
     main {
         padding-bottom: 0;
@@ -672,4 +676,15 @@ footer p{
         flex-direction: row-reverse;
         padding-top: 20px;    
     }
+
+    a[href]::after {
+        content: " (" attr(href) ")";
+        font-size: 10px;
+    }
+    #social a[href] {
+        display:block;
+    }
+    /* #social a[href]::after {
+        content: " " attr(href);
+    } */
 }
